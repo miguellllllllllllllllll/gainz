@@ -1,3 +1,4 @@
+import Fab from "@/components/fab";
 import Greetings from "@/components/greetings";
 import { View } from "react-native";
 
@@ -11,6 +12,7 @@ export default function Index() {
       }}
     >
       <Greetings />
+      <Fab />
     </View>
   );
 }
