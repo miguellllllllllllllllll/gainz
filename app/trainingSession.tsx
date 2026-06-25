@@ -16,7 +16,6 @@ export default function TrainingSession() {
   return (
     <View>
       <Text>Time: {count}</Text>
-      <Text>HALLOOOO</Text>
     </View>
   );
 }

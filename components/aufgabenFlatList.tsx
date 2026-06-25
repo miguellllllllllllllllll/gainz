@@ -1,8 +1,9 @@
-import { aufgabenList } from "@/interfaces/aufgabe";
+import { useExercises } from "@/context/exercisesContext";
 import { FlatList, StyleSheet, Text, View } from "react-native";
 
 export default function AufgabenFlatList() {
-  const data = aufgabenList;
+  const { exercises } = useExercises();
+  const data = exercises;
   return (
     <View style={styles.container}>
       <FlatList
