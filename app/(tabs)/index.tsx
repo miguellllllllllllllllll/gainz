@@ -12,7 +12,7 @@ export default function Index() {
       }}
     >
       <Greetings />
-      <Fab />
+      <Fab iconName="barbell-sharp" routeTo={"/trainingSession"} />
     </View>
   );
 }

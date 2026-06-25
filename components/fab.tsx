@@ -1,20 +1,24 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { useRouter } from "expo-router";
+import { Href, useRouter } from "expo-router";
 import { Pressable, StyleSheet } from "react-native";
-export default function Fab() {
+type Props = {
+  iconName: React.ComponentProps<typeof Ionicons>["name"];
+  routeTo: Href;
+};
+export default function Fab({ iconName, routeTo }: Props) {
   const router = useRouter();
   return (
     <Pressable
       style={({ pressed }) => [
         {
           backgroundColor: pressed ? "#2971c9" : "#0d5ab8",
-          scale: pressed ? 1.1 : 1,
+          transform: [{ scale: pressed ? 1.1 : 1 }],
         },
         styles.pressable,
       ]}
-      onPress={() => router.navigate("/trainingSession")}
+      onPress={() => router.push(routeTo)}
     >
-      <Ionicons style={{}} name="barbell-sharp" size={32} color="#fff" />
+      <Ionicons style={{}} name={iconName} size={32} color="#fff" />
     </Pressable>
   );
 }

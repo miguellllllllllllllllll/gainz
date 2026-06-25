@@ -1,6 +1,5 @@
-import { Text } from "@react-navigation/elements";
 import { useEffect, useState } from "react";
-import { View } from "react-native";
+import { StyleSheet, Text } from "react-native";
 
 export default function TrainingSession() {
   const [count, setCount] = useState(0);
@@ -13,9 +12,21 @@ export default function TrainingSession() {
     return () => clearInterval(timer);
   }, []);
 
-  return (
-    <View>
-      <Text>Time: {count}</Text>
-    </View>
-  );
+  return <Text style={styles.timer}>Timer: {count}s</Text>;
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#f5f5f5",
+  },
+  content: {
+    padding: 20,
+  },
+  timer: {
+    fontSize: 24,
+    fontWeight: "700",
+    marginBottom: 20,
+    color: "#000",
+  },
+});
