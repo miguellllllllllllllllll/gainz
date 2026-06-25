@@ -1,10 +1,12 @@
+import { useUser } from "@/context/userContext";
 import { StyleSheet, Text, View } from "react-native";
 
 export default function Greetings() {
-  const name = "Miguel";
+  const { user } = useUser();
+
   return (
     <View>
-      <Text style={styles.text}>Hello, {name}!</Text>
+      <Text style={styles.text}>Hello, {user.name}!</Text>
       <Text>Start ur training here!!!</Text>
     </View>
   );

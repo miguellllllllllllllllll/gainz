@@ -12,7 +12,7 @@ export default function Fab() {
         },
         styles.pressable,
       ]}
-      onPress={() => router.navigate("/tabs/index")}
+      onPress={() => router.navigate("/trainingSession")}
     >
       <Ionicons style={{}} name="barbell-sharp" size={32} color="#fff" />
     </Pressable>
