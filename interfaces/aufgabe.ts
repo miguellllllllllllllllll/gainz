@@ -1,13 +1,11 @@
 export interface Aufgabe {
   name: string;
+  type: "Time" | "Weight";
   imageUri?: string;
 }
 
-export interface Training {
-  title: string;
-  duration: string;
-}
-
-const aufgabe: Aufgabe = {
-  name: "low row",
-};
+export const aufgabenList: Aufgabe[] = [
+  { name: "Bench Press", type: "Weight", imageUri: "NONE" },
+  { name: "Cardio", type: "Time", imageUri: "NONE" },
+  { name: "Dip machine", type: "Weight", imageUri: "NONE" },
+];
