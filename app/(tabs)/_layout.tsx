@@ -36,6 +36,15 @@ export default function Tablayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="sensor"
+        options={{
+          title: "Sensor",
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons name="sensors" size={24} color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }
